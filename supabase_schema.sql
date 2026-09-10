@@ -109,11 +109,10 @@ CREATE TABLE IF NOT EXISTS pedido_itens (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     pedido_id UUID NOT NULL REFERENCES pedidos(id) ON DELETE CASCADE,
     sabor VARCHAR(100) NOT NULL CHECK (sabor IN (
-        'Cacau & Avela',
-        'Pasta de Amendoim',
-        'Banana & Canela',
-        'Coco & Castanhas',
-        'Frutas Vermelhas & Chia'
+        'Chocolate',
+        'Torta de Maçã',
+        'Amendoim',
+        'Frutas Vermelhas'
     )),
     quantidade_caixas INTEGER NOT NULL CHECK (quantidade_caixas > 0),
     unidades_por_caixa INTEGER NOT NULL DEFAULT 12,

@@ -10,11 +10,10 @@ interface NewOrderModalProps {
 }
 
 const SABORES_PADRAO = [
-  { sabor: 'Cacau & Avela', nome: 'Cacau & Avelã 50g' },
-  { sabor: 'Pasta de Amendoim', nome: 'Pasta de Amendoim 50g' },
-  { sabor: 'Banana & Canela', nome: 'Banana, Canela & Aveia 50g' },
-  { sabor: 'Coco & Castanhas', nome: 'Coco & Castanhas 50g' },
-  { sabor: 'Frutas Vermelhas & Chia', nome: 'Frutas Vermelhas & Chia 50g' },
+  { sabor: 'Chocolate', nome: 'Chocolate 50g' },
+  { sabor: 'Torta de Maçã', nome: 'Torta de Maçã 50g' },
+  { sabor: 'Amendoim', nome: 'Amendoim 50g' },
+  { sabor: 'Frutas Vermelhas', nome: 'Frutas Vermelhas 50g' },
 ];
 
 export const NewOrderModal: React.FC<NewOrderModalProps> = ({
@@ -31,11 +30,10 @@ export const NewOrderModal: React.FC<NewOrderModalProps> = ({
 
   // Quantidades por sabor (caixas)
   const [quantidades, setQuantidades] = useState<{ [key: string]: number }>({
-    'Cacau & Avela': 2,
-    'Pasta de Amendoim': 2,
-    'Banana & Canela': 1,
-    'Coco & Castanhas': 1,
-    'Frutas Vermelhas & Chia': 0,
+    'Chocolate': 2,
+    'Torta de Maçã': 2,
+    'Amendoim': 1,
+    'Frutas Vermelhas': 1,
   });
 
   const [loading, setLoading] = useState(false);

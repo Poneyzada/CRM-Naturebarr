@@ -3,7 +3,7 @@ from datetime import date, datetime
 from pydantic import BaseModel, Field
 
 class PedidoItemBase(BaseModel):
-    sabor: str  # 'Cacau & Avela', 'Pasta de Amendoim', 'Banana & Canela', 'Coco & Castanhas', 'Frutas Vermelhas & Chia'
+    sabor: str  # 'Chocolate', 'Torta de Maçã', 'Amendoim', 'Frutas Vermelhas'
     quantidade_caixas: int = Field(gt=0, default=1)
     unidades_por_caixa: int = 12
     preco_caixa: float = 96.00

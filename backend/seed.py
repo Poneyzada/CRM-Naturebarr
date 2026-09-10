@@ -8,11 +8,10 @@ from backend.models.lead_webhook import LeadWebhook
 from backend.services.repurchase_engine import recalculate_pdv_metrics
 
 SABORES_NATUREBARR = [
-    "Cacau & Avela",
-    "Pasta de Amendoim",
-    "Banana & Canela",
-    "Coco & Castanhas",
-    "Frutas Vermelhas & Chia"
+    "Chocolate",
+    "Torta de Maçã",
+    "Amendoim",
+    "Frutas Vermelhas"
 ]
 
 PDVS_INICIAIS = [
@@ -267,8 +266,8 @@ def seed_database():
                 db.add(ped1)
                 db.flush()
                 # Itens do Pedido 1
-                db.add(PedidoItem(pedido_id=ped1.id, sabor="Cacau & Avela", quantidade_caixas=2, preco_caixa=96.00, subtotal=192.00))
-                db.add(PedidoItem(pedido_id=ped1.id, sabor="Pasta de Amendoim", quantidade_caixas=2, preco_caixa=96.00, subtotal=192.00))
+                db.add(PedidoItem(pedido_id=ped1.id, sabor="Chocolate", quantidade_caixas=2, preco_caixa=96.00, subtotal=192.00))
+                db.add(PedidoItem(pedido_id=ped1.id, sabor="Amendoim", quantidade_caixas=2, preco_caixa=96.00, subtotal=192.00))
 
                 # Pedido 2 (se houve intervalo)
                 if p_primeiro > p_ultimo:
@@ -286,10 +285,10 @@ def seed_database():
                     db.add(ped2)
                     db.flush()
                     # Itens do Pedido 2
-                    db.add(PedidoItem(pedido_id=ped2.id, sabor="Cacau & Avela", quantidade_caixas=2, preco_caixa=96.00, subtotal=192.00))
-                    db.add(PedidoItem(pedido_id=ped2.id, sabor="Pasta de Amendoim", quantidade_caixas=2, preco_caixa=96.00, subtotal=192.00))
-                    db.add(PedidoItem(pedido_id=ped2.id, sabor="Banana & Canela", quantidade_caixas=1, preco_caixa=96.00, subtotal=96.00))
-                    db.add(PedidoItem(pedido_id=ped2.id, sabor="Coco & Castanhas", quantidade_caixas=1, preco_caixa=96.00, subtotal=96.00))
+                    db.add(PedidoItem(pedido_id=ped2.id, sabor="Chocolate", quantidade_caixas=2, preco_caixa=96.00, subtotal=192.00))
+                    db.add(PedidoItem(pedido_id=ped2.id, sabor="Amendoim", quantidade_caixas=2, preco_caixa=96.00, subtotal=192.00))
+                    db.add(PedidoItem(pedido_id=ped2.id, sabor="Torta de Maçã", quantidade_caixas=1, preco_caixa=96.00, subtotal=96.00))
+                    db.add(PedidoItem(pedido_id=ped2.id, sabor="Frutas Vermelhas", quantidade_caixas=1, preco_caixa=96.00, subtotal=96.00))
 
             # Adiciona anotação de contato inicial da Gemima
             visita = HistoricoVisita(

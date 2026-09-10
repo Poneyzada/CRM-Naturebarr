@@ -30,7 +30,7 @@ class PedidoItem(Base):
     id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
     pedido_id = Column(String(36), ForeignKey("pedidos.id", ondelete="CASCADE"), nullable=False)
     sabor = Column(String(100), nullable=False)
-    # Sabores: 'Cacau & Avela', 'Pasta de Amendoim', 'Banana & Canela', 'Coco & Castanhas', 'Frutas Vermelhas & Chia'
+    # Sabores Oficiais Naturebarr: 'Chocolate', 'Torta de Maçã', 'Amendoim', 'Frutas Vermelhas'
     quantidade_caixas = Column(Integer, nullable=False, default=1)
     unidades_por_caixa = Column(Integer, nullable=False, default=12)
     preco_caixa = Column(Float, nullable=False, default=96.00)  # R$ 8,00 por barra * 12 = R$ 96 por caixa

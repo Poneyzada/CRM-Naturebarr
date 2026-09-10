@@ -328,7 +328,7 @@ export const PDVDetailModal: React.FC<PDVDetailModalProps> = ({
               <div className="bg-white p-5 rounded-xl border border-slate-200 text-xs space-y-3">
                 <h4 className="font-bold text-slate-900">Script Recomendado para {pdv.responsavel || 'o Comprador'}:</h4>
                 <div className="p-3 bg-slate-50 rounded-lg text-slate-700 italic border border-slate-200">
-                  "Olá {pdv.responsavel || 'amigo'}, aqui é a Gemima da Naturebarr! Notei aqui pelo nosso controle que o lote de barras da {pdv.nome_fantasia} deve estar acabando esta semana. Temos os sabores Cacau & Avelã e Pasta de Amendoim frescos saindo para entrega em {pdv.cidade}. Quer que eu já reserve as caixas da sua reposição para chegar antes do fim de semana?"
+                  "Olá {pdv.responsavel || 'amigo'}, aqui é a Gemima da Naturebarr! Notei aqui pelo nosso controle que o lote de barras da {pdv.nome_fantasia} deve estar acabando esta semana. Temos os sabores Chocolate e Amendoim frescos saindo para entrega em {pdv.cidade}. Quer que eu já reserve as caixas da sua reposição para chegar antes do fim de semana?"
                 </div>
               </div>
 

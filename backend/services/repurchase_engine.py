@@ -39,7 +39,7 @@ def generate_whatsapp_link(pdv: PDV, template_type: str = "reposicao") -> str:
     elif template_type == "amostra":
         texto = (
             f"Olá {responsavel}! Aqui é a Gemima da Naturebarr. "
-            f"As amostras dos nossos sabores mais vendidos (Cacau & Avelã e Pasta de Amendoim) "
+            f"As amostras dos nossos sabores mais vendidos (Chocolate e Amendoim) "
             f"estão a caminho da {nome_loja}. Quando receber, me avise para alinharmos os feedbacks!"
         )
     elif template_type == "reativacao":

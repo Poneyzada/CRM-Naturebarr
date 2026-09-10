@@ -694,7 +694,7 @@ export const CockpitView: React.FC<CockpitViewProps> = ({
                     <form onSubmit={handleSalvarNotaRapida} className="space-y-3">
                       <textarea
                         rows={3}
-                        placeholder="Ex: Liguei para o Rodrigo. O estoque de Cacau & Avelã acabou e ele vai pedir 4 caixas na sexta-feira..."
+                        placeholder="Ex: Liguei para o Rodrigo. O estoque de Chocolate acabou e ele vai pedir 4 caixas na sexta-feira..."
                         value={novaNota}
                         onChange={(e) => setNovaNota(e.target.value)}
                         className="w-full p-3 bg-slate-50 border border-slate-200/80 rounded-xl text-xs text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#afcb48] font-medium"
@@ -853,7 +853,7 @@ export const CockpitView: React.FC<CockpitViewProps> = ({
                   </div>
 
                   <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80 text-xs text-slate-700 leading-relaxed italic">
-                    "Olá {currentPDV.responsavel || 'amigo'}, aqui é a Gemima da Naturebarr! Notei aqui pelo nosso controle que o lote de barras da {currentPDV.nome_fantasia} deve estar acabando esta semana. Temos os sabores Cacau & Avelã e Pasta de Amendoim frescos saindo para entrega em {currentPDV.cidade}. Quer que eu já reserve as caixas da sua reposição para chegar antes do fim de semana?"
+                    "Olá {currentPDV.responsavel || 'amigo'}, aqui é a Gemima da Naturebarr! Notei aqui pelo nosso controle que o lote de barras da {currentPDV.nome_fantasia} deve estar acabando esta semana. Temos os sabores Chocolate e Amendoim frescos saindo para entrega em {currentPDV.cidade}. Quer que eu já reserve as caixas da sua reposição para chegar antes do fim de semana?"
                   </div>
                 </div>
               </div>
