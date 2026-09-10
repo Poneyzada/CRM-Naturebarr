@@ -66,6 +66,7 @@ CREATE TABLE IF NOT EXISTS pdvs (
     total_pedidos INTEGER DEFAULT 0,
 
     -- Acompanhamento Comercial
+    vendedor_nome VARCHAR(100) DEFAULT 'Gemima',
     vendedor_id UUID REFERENCES perfis(id) ON DELETE SET NULL,
     proxima_acao_comercial VARCHAR(200),
     data_proxima_acao DATE,
@@ -154,6 +155,7 @@ CREATE TABLE IF NOT EXISTS leads_webhook (
     empresa VARCHAR(150),
     cidade VARCHAR(100),
     estado VARCHAR(2),
+    regiao VARCHAR(50) DEFAULT 'Salvador',
     payload_bruto JSONB NOT NULL,
     processado BOOLEAN DEFAULT TRUE,
     pdv_id UUID REFERENCES pdvs(id) ON DELETE SET NULL,

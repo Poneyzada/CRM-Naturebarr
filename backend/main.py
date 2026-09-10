@@ -10,6 +10,19 @@ from backend.routers import (
 )
 from backend.seed import seed_database
 
+from sqlalchemy import text
+
+# Função de migração automática para garantir colunas existentes no PostgreSQL
+def auto_migrate():
+    try:
+        with engine.connect() as conn:
+            if "postgresql" in str(engine.url):
+                conn.execute(text("ALTER TABLE pdvs ADD COLUMN IF NOT EXISTS vendedor_nome VARCHAR(100) DEFAULT 'Gemima';"))
+                conn.execute(text("ALTER TABLE leads_webhook ADD COLUMN IF NOT EXISTS regiao VARCHAR(50) DEFAULT 'Salvador';"))
+                conn.commit()
+    except Exception as e:
+        print(f"Aviso de auto-migração: {e}")
+
 # Criação automática das tabelas
 Base.metadata.create_all(bind=engine)
 
@@ -33,6 +46,7 @@ app.add_middleware(
 # Inicializa dados de demonstração na inicialização se o banco estiver vazio
 @app.on_event("startup")
 def on_startup():
+    auto_migrate()
     seed_database()
 
 # Inclusão dos Routers
