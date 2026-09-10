@@ -1,0 +1,36 @@
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+*.local
+
+# Python & Backend
+__pycache__/
+backend/__pycache__/
+backend/*/__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Database & Environment
+*.db
+*.sqlite
+*.sqlite3
+naturebarr.db
+.env
+.env.*
+!.env.example
+
+# IDE & OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
