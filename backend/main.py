@@ -23,6 +23,9 @@ def auto_migrate():
     except Exception as e:
         print(f"Aviso de auto-migração: {e}")
 
+# Executa migração de colunas
+auto_migrate()
+
 # Criação automática das tabelas
 Base.metadata.create_all(bind=engine)
 
